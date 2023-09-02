@@ -1,0 +1,119 @@
+.header {
+  width: 100%;
+}
+.header__line {
+  width: 100%;
+  height: 5px;
+  background-color: var(--darkslategray);
+}
+.header__navbar {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5%;
+}
+.header__navbar--logo {
+  width: auto;
+  height: 32px;
+}
+.header__navbar--logo_content {
+  width: auto;
+  height: 32px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.header__navbar--list {
+  width: 30%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header__navbar--list_menu {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+}
+.header__navbar--list_menu-icon {
+  width: auto;
+}
+.header__navbar--list_menu-dropdown {
+  display: none;
+}
+.header__navbar--icons {
+  width: 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__navbar--icons_btn {
+  width: 24px;
+  height: 24px;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  position: relative;
+}
+.header__navbar--icons_btn-svg {
+  width: 24px;
+}
+.header__navbar--icons_btn-searchbar {
+  display: none;
+}
+.header__navbar--icons_btn-notification {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  position: absolute;
+  top: 3px;
+  right: 0px;
+  background-color: #ff0000;
+}
+.header__contact {
+  width: 100%;
+  height: 70px;
+  background-color: var(--darkslategray);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5%;
+}
+.header__contact--info {
+  width: 400px;
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+}
+.header__contact--info_btn {
+  color: var(--wheat);
+  border: none;
+  outline: none;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+}
+.header__contact--info_btn-svg {
+  margin-right: 10px;
+}
+.header__contact--social {
+  width: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header__contact--social_btn {
+  width: 40px;
+  height: 40px;
+  border: none;
+  outline: none;
+  background-color: var(--wheat);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header__contact--social_btn-img {
+  width: auto;
+}/*# sourceMappingURL=Header.css.map */

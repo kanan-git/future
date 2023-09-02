@@ -1,58 +1,47 @@
-import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
-import './App.css';
+import React from 'react'
+import './global.css'
+
+import Header from './components/Header/Header'
+import Footer from './components/Footer/Footer'
+import Homepage from './pages/Homepage/Homepage'
 
 function App() {
+  // const isMobile = false
+  // window.scrollTo(0, 0)
+  // window.innerWidth >= '1280px' ? isMobile = false : isMobile = true
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Counter />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <span>
-          <span>Learn </span>
-          <a
-            className="App-link"
-            href="https://reactjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux-toolkit.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux Toolkit
-          </a>
-          ,<span> and </span>
-          <a
-            className="App-link"
-            href="https://react-redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React Redux
-          </a>
-        </span>
-      </header>
+      <Header />
+
+      <Homepage />
+
+      {/* 01 Homepage scss */}
+      {/* 02 Shop html */}
+      {/* 03 Shop scss */}
+      {/* 04 ShopDetail & review part html */}
+      {/* 05 ShopDetail & review part scss */}
+      {/* 06 Cart html */}
+      {/* 07 Cart scss */}
+      {/* 08 Checkout html */}
+      {/* 09 Checkout scss */}
+      {/* 10 Whishlist html */}
+      {/* 11 Whishlist scss */}
+      {/* 12 Blog html */}
+      {/* 13 Blog scss */}
+      {/* 14 BlogDetails html */}
+      {/* 15 BlogDetails scss */}
+      {/* 16 Contact html */}
+      {/* 17 Contact scss */}
+      {/* 18 About html */}
+      {/* 19 About scss */}
+      {/* 20 overall routing & unique links */}
+      {/* 21 responsivity and mobile version */}
+      {/* 22 footer image hover overlay icon + header search button */}
+
+      <Footer />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

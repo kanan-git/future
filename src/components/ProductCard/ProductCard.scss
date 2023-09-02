@@ -1,0 +1,16 @@
+.productcard {
+    &__image {}
+    &__tag {}
+    &__group {
+        &--btn {
+            &_icon {}
+        }
+    }
+    &__info {
+        &--category {}
+        &--main {
+            &_name {}
+            &_price {}
+        }
+    }
+}
