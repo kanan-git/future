@@ -4,6 +4,7 @@ import './global.css'
 import Header from './components/Header/Header'
 import Footer from './components/Footer/Footer'
 import Homepage from './pages/Homepage/Homepage'
+import Shop from './pages/Shop/Shop'
 
 function App() {
   // const isMobile = false
@@ -14,9 +15,9 @@ function App() {
     <div className="App">
       <Header />
 
-      <Homepage />
-
-      {/* 01 Homepage scss */}
+      {/* <Homepage /> */}
+      <Shop />
+      
       {/* 02 Shop html */}
       {/* 03 Shop scss */}
       {/* 04 ShopDetail & review part html */}
@@ -37,7 +38,6 @@ function App() {
       {/* 19 About scss */}
       {/* 20 overall routing & unique links */}
       {/* 21 responsivity and mobile version */}
-      {/* 22 footer image hover overlay icon + header search button */}
 
       <Footer />
     </div>

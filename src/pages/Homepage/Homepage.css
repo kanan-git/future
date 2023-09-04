@@ -27,11 +27,18 @@
   font-size: 51px;
   font-weight: 600;
 }
-.head__container strong {
+.head__container--colour {
   font-family: "Josefin Sans";
   font-size: 51px;
   font-weight: 600;
   color: var(--darkslategray);
+  position: relative;
+}
+.head__container--colour_icon {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .head__container--btn {
   margin-top: 30px;
@@ -319,6 +326,18 @@
   border: none;
   outline: none;
   background-color: transparent;
+  position: relative;
+  z-index: 2;
+}
+.products__selections--btn:first-of-type {
+  color: var(--darkslategray);
+}
+.products__selections--btn_icon {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  z-index: -1;
+  transform: translateX(-50%);
 }
 .products__container {
   width: 1278px;

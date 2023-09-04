@@ -7,7 +7,10 @@ function Homepage() {
             <div className="home__sectors head">
                 <div className="head__container">
                     <p className="head__container--title"> Interior Needs </p>
-                    <h4 className="head__container--description"> Various <strong> new collecitons </strong> of furniture to decorate the corner of your house. </h4>
+                    <h4 className="head__container--description"> Various <strong className="head__container--colour">
+                        new collecitons
+                        <img src="/assets/icon/vector.svg" alt="vector" className="head__container--colour_icon" />
+                    </strong> of furniture to decorate the corner of your house. </h4>
                     <button className="head__container--btn"> Shop Now </button>
                 </div>
                 <img src="/assets/homepage/nathan-oakley.png" alt="nathan-oakley" className="head__content" />
@@ -220,9 +223,18 @@ function Homepage() {
             </div>
             <div className="home__sectors products">
                 <div className="products__selections">
-                    <button className="products__selections--btn"> New Arrival </button>
-                    <button className="products__selections--btn"> Top Rated </button>
-                    <button className="products__selections--btn"> Featured </button>
+                    <button className="products__selections--btn">
+                        New Arrival
+                        <img src="/assets/icon/selected.svg" alt="rectangle" className="products__selections--btn_icon" />
+                    </button>
+                    <button className="products__selections--btn">
+                        Top Rated
+                        {/* <img src="/assets/icon/selected.svg" alt="rectangle" className="products__selections--btn_icon" /> */}
+                    </button>
+                    <button className="products__selections--btn">
+                        Featured
+                        {/* <img src="/assets/icon/selected.svg" alt="rectangle" className="products__selections--btn_icon" /> */}
+                    </button>
                 </div>
                 <div className="products__container">
                     <div className="productcard" id="p_01">

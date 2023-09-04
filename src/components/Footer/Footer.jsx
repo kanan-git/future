@@ -43,12 +43,59 @@ function Footer() {
                 <span className="footer__main--columns">
                     <h3 className="footer__main--columns_headers"> Follow Us </h3>
                     <div className="footer__main--columns_gallery">
-                        <img src="/assets/gallery/gallery_01.png" alt="img-01" className="footer__main--columns_gallery-image" />
-                        <img src="/assets/gallery/gallery_02.png" alt="img-02" className="footer__main--columns_gallery-image" />
-                        <img src="/assets/gallery/gallery_03.png" alt="img-03" className="footer__main--columns_gallery-image" />
-                        <img src="/assets/gallery/gallery_04.png" alt="img-04" className="footer__main--columns_gallery-image" />
-                        <img src="/assets/gallery/gallery_05.png" alt="img-05" className="footer__main--columns_gallery-image" />
-                        <img src="/assets/gallery/gallery_06.png" alt="img-06" className="footer__main--columns_gallery-image" />
+                        <div className="footer__main--columns_gallery-image" 
+                        onMouseEnter={() => {document.getElementById("overlay_01").style.display = `block`}} 
+                        onMouseLeave={() => {document.getElementById("overlay_01").style.display = `none`}}>
+                            <img src="/assets/gallery/gallery_01.png" alt="img-01" className="footer__main--columns_gallery-image__content" />
+                            <div className="footer__main--columns_gallery-image__overlay" id="overlay_01">
+                                <img src="/assets/icon/gallery-hover.svg" className="footer__main--columns_gallery-image__overlay--icon" />
+                            </div>
+                        </div>
+
+                        <div className="footer__main--columns_gallery-image" 
+                        onMouseEnter={() => {document.getElementById("overlay_02").style.display = `block`}} 
+                        onMouseLeave={() => {document.getElementById("overlay_02").style.display = `none`}}>
+                            <img src="/assets/gallery/gallery_02.png" alt="img-02" className="footer__main--columns_gallery-image__content" />
+                            <div className="footer__main--columns_gallery-image__overlay" id="overlay_02">
+                                <img src="/assets/icon/gallery-hover.svg" className="footer__main--columns_gallery-image__overlay--icon" />
+                            </div>
+                        </div>
+
+                        <div className="footer__main--columns_gallery-image" 
+                        onMouseEnter={() => {document.getElementById("overlay_03").style.display = `block`}} 
+                        onMouseLeave={() => {document.getElementById("overlay_03").style.display = `none`}}>
+                            <img src="/assets/gallery/gallery_03.png" alt="img-03" className="footer__main--columns_gallery-image__content" />
+                            <div className="footer__main--columns_gallery-image__overlay" id="overlay_03">
+                                <img src="/assets/icon/gallery-hover.svg" className="footer__main--columns_gallery-image__overlay--icon" />
+                            </div>
+                        </div>
+
+                        <div className="footer__main--columns_gallery-image" 
+                        onMouseEnter={() => {document.getElementById("overlay_04").style.display = `block`}} 
+                        onMouseLeave={() => {document.getElementById("overlay_04").style.display = `none`}}>
+                            <img src="/assets/gallery/gallery_04.png" alt="img-04" className="footer__main--columns_gallery-image__content" />
+                            <div className="footer__main--columns_gallery-image__overlay" id="overlay_04">
+                                <img src="/assets/icon/gallery-hover.svg" className="footer__main--columns_gallery-image__overlay--icon" />
+                            </div>
+                        </div>
+
+                        <div className="footer__main--columns_gallery-image" 
+                        onMouseEnter={() => {document.getElementById("overlay_05").style.display = `block`}} 
+                        onMouseLeave={() => {document.getElementById("overlay_05").style.display = `none`}}>
+                            <img src="/assets/gallery/gallery_05.png" alt="img-05" className="footer__main--columns_gallery-image__content" />
+                            <div className="footer__main--columns_gallery-image__overlay" id="overlay_05">
+                                <img src="/assets/icon/gallery-hover.svg" className="footer__main--columns_gallery-image__overlay--icon" />
+                            </div>
+                        </div>
+
+                        <div className="footer__main--columns_gallery-image" 
+                        onMouseEnter={() => {document.getElementById("overlay_06").style.display = `block`}} 
+                        onMouseLeave={() => {document.getElementById("overlay_06").style.display = `none`}}>
+                            <img src="/assets/gallery/gallery_06.png" alt="img-06" className="footer__main--columns_gallery-image__content" />
+                            <div className="footer__main--columns_gallery-image__overlay" id="overlay_06">
+                                <img src="/assets/icon/gallery-hover.svg" className="footer__main--columns_gallery-image__overlay--icon" />
+                            </div>
+                        </div>
                     </div>
                 </span>
             </section>
