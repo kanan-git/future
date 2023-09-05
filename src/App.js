@@ -25,19 +25,31 @@ function App() {
   return (
     <div className="App">
       <Header />
+      
+      {/* 01 ShopDetail (description + review parts) | HTML & SCSS + Links */}
+      {/* 02 Cart | HTML & SCSS */}
+      {/* 03 Checkout | HTML & SCSS */}
+      {/* 04 Wishlist | HTML & SCSS */}
+      {/* 05 Team | HTML & SCSS */}
+      {/* 06 Blog | HTML & SCSS */}
+      {/* 07 BlogDetails | HTML & SCSS */}
+      {/* 08 Contact | HTML & SCSS */}
+      {/* 09 About | HTML & SCSS */}
+      {/* 10 Homepage | add Link routes for some buttons, lists, logo, icon also HTTP link for Social Media */}
+      {/* 11 Shop | add Link routes for some buttons, lists, logo, icon also HTTP link for Social Media */}
 
       <Routes>
         <Route path="/" element={ <Homepage /> } />
         <Route path="/shop" element={ <Shop /> } />
-        <Route path="/shop/details" element={ <ShopDetails /> } />          {/* ShopDetail (description + review parts) | HTML & SCSS */}
-        <Route path="/cart" element={ <Cart /> } />          {/* Cart | HTML & SCSS */}
-        <Route path="/checkout" element={ <Checkout /> } />          {/* Checkout | HTML & SCSS */}
-        <Route path="/wishlist" element={ <Wishlist /> } />          {/* Wishlist | HTML & SCSS */}
-        <Route path="/team" element={ <Team /> } />          {/* Team | HTML & SCSS */}
-        <Route path="/blog" element={ <Blog /> } />          {/* Blog | HTML & SCSS */}
-        <Route path="/blog/article" element={ <BlogArticle /> } />          {/* BlogDetails | HTML & SCSS */}
-        <Route path="/contact" element={ <Contact /> } />          {/* Contact | HTML & SCSS */}
-        <Route path="/about" element={ <About /> } />          {/* About | HTML & SCSS */}
+        <Route path="/shop/details" element={ <ShopDetails /> } />
+        <Route path="/cart" element={ <Cart /> } />
+        <Route path="/checkout" element={ <Checkout /> } />
+        <Route path="/wishlist" element={ <Wishlist /> } />
+        <Route path="/team" element={ <Team /> } />
+        <Route path="/blog" element={ <Blog /> } />
+        <Route path="/blog/article" element={ <BlogArticle /> } />
+        <Route path="/contact" element={ <Contact /> } />
+        <Route path="/about" element={ <About /> } />
       </Routes>
 
       <Footer />
