@@ -1,13 +1,13 @@
 import React, { useState, useEffect, useRef } from 'react'
-import './About.css'
+import './Checkout.css'
 import { BrowserRouter as Router, Routes, Route, Link, Navigate } from 'react-router-dom'
 
-function About() {
+function Checkout() {
     return (
-        <section className="about">
-            About page
+        <section className="checkout">
+            Checkout page
         </section>
     )
 }
 
-export default About
+export default Checkout

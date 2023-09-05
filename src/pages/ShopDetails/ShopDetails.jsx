@@ -1,13 +1,13 @@
 import React, { useState, useEffect, useRef } from 'react'
-import './About.css'
+import './ShopDetails.css'
 import { BrowserRouter as Router, Routes, Route, Link, Navigate } from 'react-router-dom'
 
-function About() {
+function ShopDetails() {
     return (
-        <section className="about">
-            About page
+        <section className="details">
+            Shop Details page
         </section>
     )
 }
 
-export default About
+export default ShopDetails
