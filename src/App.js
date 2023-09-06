@@ -26,15 +26,13 @@ function App() {
     <div className="App">
       <Header />
       
-      {/* 01  Cart | HTML & SCSS */}
-      {/* 02  Checkout | HTML & SCSS */}
-      {/* 03  Wishlist | HTML & SCSS */}
-      {/* 04  Team | HTML & SCSS */}
-      {/* 05  Blog | HTML & SCSS */}
-      {/* 06  BlogDetails | HTML & SCSS */}
-      {/* 07  Contact | HTML & SCSS */}
-      {/* 08  About | HTML & SCSS */}
-      {/* 09  add Link routes for some buttons, lists, logo, icon also HTTP link for Social Media to each 11 pages, 2 components */}
+      {/* 01  Wishlist | HTML & SCSS */}
+      {/* 02  Team | HTML & SCSS */}
+      {/* 03  Blog | HTML & SCSS */}
+      {/* 04  BlogDetails | HTML & SCSS */}
+      {/* 05  Contact | HTML & SCSS */}
+      {/* 06  About | HTML & SCSS */}
+      {/* 07  add Link routes for some buttons, lists, logo, icon also HTTP link for Social Media to each 11 pages, 2 components */}
 
       <Routes>
         <Route path="/" element={ <Homepage /> } />
