@@ -404,6 +404,9 @@
   justify-content: space-between;
   align-items: center;
 }
+.blog__info {
+  width: auto;
+}
 .blog__info--title {
   font-family: "Josefin Sans";
   font-size: 40px;

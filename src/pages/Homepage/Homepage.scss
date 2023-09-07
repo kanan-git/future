@@ -391,6 +391,7 @@
     justify-content: space-between;
     align-items: center;
     &__info {
+        width: auto;
         &--title {
             font-family: 'Josefin Sans';
             font-size: 40px;

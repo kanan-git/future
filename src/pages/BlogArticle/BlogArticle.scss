@@ -1,1 +1,75 @@
-.article {}
+.article {
+    &__header {}
+    &__block {
+        &--group {
+            &_icon {}
+            &_text {}
+        }
+    }
+    &__summary {}
+    &__cover {}
+    &__container {
+        &--main {
+            &_head {}
+            &_textcontent {}
+            &_img {}
+            &_moreimages {
+                &-content {}
+            }
+            &_tags {
+                &-btn {}
+            }
+            &_comment {
+                &-top {}
+                &-title {}
+                &-textbox {}
+                &-inputs {
+                    &__grp {
+                        &--label {}
+                    }
+                }
+                &-aggree {
+                    &__checkbox {}
+                }
+                &-submit {}
+            }
+        }
+        &--navigation {
+            &_search {
+                &-label {}
+                &-btn {}
+            }
+            &_post {
+                &-header {}
+                &-card {
+                    &__img {}
+                    &__info {
+                        &--name {}
+                        &--date {}
+                    }
+                }
+            }
+            &_social {
+                &-block {
+                    &__btn {
+                        &--icon {}
+                    }
+                }
+            }
+            &_gallery {
+                &-images {
+                    &__content {}
+                }
+            }
+            &_tags {
+                &-btn {}
+            }
+        }
+    }
+    .blog {
+        &__info {
+            &--title {}
+            .articleheader {}
+        }
+    }
+}

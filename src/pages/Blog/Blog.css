@@ -1,1 +1,51 @@
-/*# sourceMappingURL=Blog.css.map */
+.blog {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 5%;
+  margin-top: 0px;
+}
+.blog__header {
+  font-size: 34px;
+  font-weight: 600;
+  margin-top: 50px;
+}
+.blog__summary {
+  width: 689px;
+  font-size: 16px;
+  padding: 0 20px;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 50px;
+}
+.blog__container {
+  height: auto;
+  row-gap: 50px;
+}
+.blog__pagination {
+  width: 220px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+.blog__pagination--chevrons {
+  width: auto;
+}
+.blog__pagination--button {
+  width: 35px;
+  height: 35px;
+  background-color: var(--scarlet);
+  outline: none;
+  border: none;
+  border-radius: 50%;
+  font-size: 16px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.blog__pagination--button:first-of-type {
+  background-color: var(--darkslategray);
+  color: var(--defaultwhite);
+}/*# sourceMappingURL=Blog.css.map */
