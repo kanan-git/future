@@ -1,8 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react'
 import './Wishlist.css'
+import { useNavigate } from 'react-router-dom'
 import { BrowserRouter as Router, Routes, Route, Link, Navigate } from 'react-router-dom'
 
 function Wishlist() {
+    const navigate = useNavigate()
     return (
         <section className="wishlist">
             <h3 className="wishlist__header"> Wishlist </h3>
@@ -53,7 +55,7 @@ function Wishlist() {
                     </td>
                 </tr>
             </table>
-            <div className="home__sectors subscribe">
+            <div className="subscribe" style={{width: "110%"}}>
                 <div className="subscribe__rectangle"></div>
                 <div className="subscribe__container">
                     <h4 className="subscribe__container--header"> Subscribe now and get 10% off all items </h4>

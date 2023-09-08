@@ -1,8 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react'
 import './Team.css'
+import { useNavigate } from 'react-router-dom'
 import { BrowserRouter as Router, Routes, Route, Link, Navigate } from 'react-router-dom'
 
 function Team() {
+    const navigate = useNavigate()
     return (
         <section className="team">
             <h3 className="team__header"> Meet Our Team </h3>
@@ -94,7 +96,7 @@ function Team() {
                     </div>
                 </div>
             </div>
-            <div className="home__sectors subscribe">
+            <div className="subscribe" style={{width: "110%"}}>
                 <div className="subscribe__rectangle"></div>
                 <div className="subscribe__container">
                     <h4 className="subscribe__container--header"> Subscribe now and get 10% off all items </h4>

@@ -1,8 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react'
 import './Shop.css'
+import { useNavigate } from 'react-router-dom'
 import { BrowserRouter as Router, Routes, Route, Link, Navigate } from 'react-router-dom'
 
 function Shop() {
+    const navigate = useNavigate()
     return (
         <section className="shop">
             <div className="shop__banner">
@@ -167,7 +169,12 @@ function Shop() {
                         </span>
                     </div>
                     <div className="shop__container--main_cards">
-                        <div className="productcard" id="p_01">
+                        <div className="productcard" id="p_01" onClick={
+                        () => {
+                            navigate("/shop/details")
+                            window.scrollTo(0,0)
+                        }
+                    }>
                             <img src="/assets/product/product_01.png" alt="product-01" className="productcard__image" />
                             <div className="productcard__group">
                                 <button className="productcard__group--btn">
@@ -185,7 +192,12 @@ function Shop() {
                                 </div>
                             </div>
                         </div>
-                        <div className="productcard" id="p_02">
+                        <div className="productcard" id="p_02" onClick={
+                        () => {
+                            navigate("/shop/details")
+                            window.scrollTo(0,0)
+                        }
+                    }>
                             <img src="/assets/product/product_02.png" alt="product-02" className="productcard__image" />
                             <div className="productcard__group">
                                 <button className="productcard__group--btn">
@@ -203,7 +215,12 @@ function Shop() {
                                 </div>
                             </div>
                         </div>
-                        <div className="productcard" id="p_03">
+                        <div className="productcard" id="p_03" onClick={
+                        () => {
+                            navigate("/shop/details")
+                            window.scrollTo(0,0)
+                        }
+                    }>
                             <img src="/assets/product/product_03.png" alt="product-03" className="productcard__image" />
                             <div className="productcard__group">
                                 <button className="productcard__group--btn">
@@ -221,7 +238,12 @@ function Shop() {
                                 </div>
                             </div>
                         </div>
-                        <div className="productcard" id="p_04">
+                        <div className="productcard" id="p_04" onClick={
+                        () => {
+                            navigate("/shop/details")
+                            window.scrollTo(0,0)
+                        }
+                    }>
                             <img src="/assets/product/product_04.png" alt="product-04" className="productcard__image" />
                             <div className="productcard__group">
                                 <button className="productcard__group--btn">
@@ -239,7 +261,12 @@ function Shop() {
                                 </div>
                             </div>
                         </div>
-                        <div className="productcard" id="p_05">
+                        <div className="productcard" id="p_05" onClick={
+                        () => {
+                            navigate("/shop/details")
+                            window.scrollTo(0,0)
+                        }
+                    }>
                             <img src="/assets/product/product_05.png" alt="product-05" className="productcard__image" />
                             <div className="productcard__group">
                                 <button className="productcard__group--btn">
@@ -257,7 +284,12 @@ function Shop() {
                                 </div>
                             </div>
                         </div>
-                        <div className="productcard" id="p_06">
+                        <div className="productcard" id="p_06" onClick={
+                        () => {
+                            navigate("/shop/details")
+                            window.scrollTo(0,0)
+                        }
+                    }>
                             <img src="/assets/product/product_06.png" alt="product-06" className="productcard__image" />
                             <div className="productcard__group">
                                 <button className="productcard__group--btn">
@@ -275,7 +307,12 @@ function Shop() {
                                 </div>
                             </div>
                         </div>
-                        <div className="productcard" id="p_07">
+                        <div className="productcard" id="p_07" onClick={
+                        () => {
+                            navigate("/shop/details")
+                            window.scrollTo(0,0)
+                        }
+                    }>
                             <img src="/assets/product/product_07.png" alt="product-07" className="productcard__image" />
                             <div className="productcard__group">
                                 <button className="productcard__group--btn">
@@ -293,7 +330,12 @@ function Shop() {
                                 </div>
                             </div>
                         </div>
-                        <div className="productcard" id="p_08">
+                        <div className="productcard" id="p_08" onClick={
+                        () => {
+                            navigate("/shop/details")
+                            window.scrollTo(0,0)
+                        }
+                    }>
                             <img src="/assets/product/product_08.png" alt="product-08" className="productcard__image" />
                             <div className="productcard__group">
                                 <button className="productcard__group--btn">
@@ -311,7 +353,12 @@ function Shop() {
                                 </div>
                             </div>
                         </div>
-                        <div className="productcard" id="p_09">
+                        <div className="productcard" id="p_09" onClick={
+                        () => {
+                            navigate("/shop/details")
+                            window.scrollTo(0,0)
+                        }
+                    }>
                             <img src="/assets/product/product_01.png" alt="product-09" className="productcard__image" />
                             <div className="productcard__group">
                                 <button className="productcard__group--btn">
@@ -341,7 +388,7 @@ function Shop() {
                 </main>
             </div>
 
-            <div className="subscribe">
+            <div className="subscribe" style={{width: "110%"}}>
                 <div className="subscribe__rectangle"></div>
                 <div className="subscribe__container">
                     <h4 className="subscribe__container--header"> Subscribe now and get 10% off all items </h4>

@@ -1,8 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react'
 import './ShopDetails.css'
+import { useNavigate } from 'react-router-dom'
 import { BrowserRouter as Router, Routes, Route, Link, Navigate } from 'react-router-dom'
 
 function ShopDetails() {
+    const navigate = useNavigate()
     return (
         <section className="details">
             <div className="details__sector">
@@ -46,28 +48,54 @@ function ShopDetails() {
                 </div>
             </div>
             <div className="details__sector">
-                <div className="details__sector--information">
+                <div className="details__sector--information" id="containerr" style={{height: "369px"}}>
                     <div className="details__sector--information_selections">
-                        <button className="details__sector--information_selections-btn">
+                        <button className="details__sector--information_selections-btn" id="selection_a" onClick={
+                            (e) => {
+                                e.target.style.color = `var(--darkslategray)`
+                                document.getElementById("selection_b").style.color = `#000000`
+                                document.getElementById("paragraph1").style.display = `block`
+                                document.getElementById("paragraph2").style.display = `block`
+                                document.getElementById("sel1").style.display = `block`
+                                document.getElementById("sel2").style.display = `none`
+                                document.getElementById("reView").style.display = `none`
+                                document.getElementById("containerr").style.height = `369px`
+                            }
+                        }>
                             Description
-                            <img src="/assets/icon/selected.svg" className="details__sector--information_selections-btn__rectangle" />
+                            <img src="/assets/icon/selected.svg" 
+                            className="details__sector--information_selections-btn__rectangle" 
+                            id="sel1" style={{display: 'block'}} />
                         </button>
-                        <button className="details__sector--information_selections-btn">
+                        <button className="details__sector--information_selections-btn" id="selection_b" onClick={
+                            (e) => {
+                                document.getElementById("selection_a").style.color = `#000000`
+                                e.target.style.color = `var(--darkslategray)`
+                                document.getElementById("paragraph1").style.display = `none`
+                                document.getElementById("paragraph2").style.display = `none`
+                                document.getElementById("sel1").style.display = `none`
+                                document.getElementById("sel2").style.display = `block`
+                                document.getElementById("reView").style.display = `block`
+                                document.getElementById("containerr").style.height = `1087px`
+                            }
+                        }>
                             Review
-                            {/* <img src="/assets/icon/selected.svg" className="details__sector--information_selections-btn__rectangle" /> */}
+                            <img src="/assets/icon/selected.svg" 
+                            className="details__sector--information_selections-btn__rectangle" 
+                            id="sel2" style={{display: 'none'}} />
                         </button>
                     </div>
-                    {/* <p className="details__sector--information_paragraph">
+                    <p className="details__sector--information_paragraph" style={{display: 'block'}} id="paragraph1">
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy 
                         text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
                         It has survived not only five centuries,
                     </p>
-                    <p className="details__sector--information_paragraph">
+                    <p className="details__sector--information_paragraph" style={{display: 'block'}} id="paragraph2">
                         but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release 
                         of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker 
                         including versions of Lorem Ipsum
-                    </p> */}
-                    <div className="details__sector--information_review">
+                    </p>
+                    <div className="details__sector--information_review" style={{display: `none`}} id="reView">
                         <div className="details__sector--information_review-card">
                             <img src="/assets/users/user_comment.png" alt="user" className="details__sector--information_review-card__profile" />
                             <div className="details__sector--information_review-card__text">
@@ -153,7 +181,11 @@ function ShopDetails() {
                         <div className="details__sector--cover_group-inf">
                             <p className="details__sector--cover_group-inf__tag"> Living Room </p>
                             <h3 className="details__sector--cover_group-inf__text"> The best foam padded chair </h3>
-                            <button className="details__sector--cover_group-inf__btn"> Shop Now </button>
+                            <button className="details__sector--cover_group-inf__btn" onClick={
+                                () => {
+                                    navigate("/shop")
+                                }
+                            }> Shop Now </button>
                         </div>
                         <img src="/assets/homepage/sam-moghadam.png" alt="cover" className="details__sector--cover_group-image" />
                     </div>
@@ -169,7 +201,11 @@ function ShopDetails() {
                     Related Products
                 </h3>
                 <div className="details__sector--cards">
-                    <div className="productcard" id="rp_01">
+                    <div className="productcard" id="rp_01" onClick={
+                        () => {
+                            navigate("/shop")
+                        }
+                    }>
                         <img src="/assets/product/product_01.png" alt="product-01" className="productcard__image" />
                         <div className="productcard__tag"> New </div>
                         <div className="productcard__group">
@@ -188,7 +224,11 @@ function ShopDetails() {
                             </div>
                         </div>
                     </div>
-                    <div className="productcard" id="rp_02">
+                    <div className="productcard" id="rp_02" onClick={
+                        () => {
+                            navigate("/shop")
+                        }
+                    }>
                         <img src="/assets/product/product_02.png" alt="product-02" className="productcard__image" />
                         <div className="productcard__tag"> New </div>
                         <div className="productcard__group">
@@ -207,7 +247,11 @@ function ShopDetails() {
                             </div>
                         </div>
                     </div>
-                    <div className="productcard" id="rp_03">
+                    <div className="productcard" id="rp_03" onClick={
+                        () => {
+                            navigate("/shop")
+                        }
+                    }>
                         <img src="/assets/product/product_03.png" alt="product-03" className="productcard__image" />
                         <div className="productcard__tag"> New </div>
                         <div className="productcard__group">
@@ -226,7 +270,11 @@ function ShopDetails() {
                             </div>
                         </div>
                     </div>
-                    <div className="productcard" id="rp_04">
+                    <div className="productcard" id="rp_04" onClick={
+                        () => {
+                            navigate("/shop")
+                        }
+                    }>
                         <img src="/assets/product/product_04.png" alt="product-04" className="productcard__image" />
                         <div className="productcard__tag"> New </div>
                         <div className="productcard__group">
@@ -252,7 +300,7 @@ function ShopDetails() {
                     <div className="details__sector--pagination_dots"></div>
                 </div>
             </div>
-            <div className="subscribe">
+            <div className="subscribe" style={{width: "110%"}}>
                 <div className="subscribe__rectangle"></div>
                 <div className="subscribe__container">
                     <h4 className="subscribe__container--header"> Subscribe now and get 10% off all items </h4>

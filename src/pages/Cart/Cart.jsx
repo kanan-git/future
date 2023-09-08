@@ -1,8 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react'
 import './Cart.css'
+import { useNavigate } from 'react-router-dom'
 import { BrowserRouter as Router, Routes, Route, Link, Navigate } from 'react-router-dom'
 
 function Cart() {
+    const navigate = useNavigate()
     return (
         <section className="cart">
             <h3 className="cart__header"> Your Cart </h3>
@@ -35,7 +37,7 @@ function Cart() {
                             <strong className="cart__container--table_rows-cell__price"> $ 75.00 </strong>
                         </td>
                         <td className="cart__container--table_rows-cell">
-                            <button className="cart__container--table_rows-cell__trash">
+                            <button className="cart__container--table_rows-cell__trash" style={{border: "none"}}>
                                 <img src="/assets/icon/trash.svg" className="cart__container--table_rows-cell__trash--icon" />
                             </button>
                         </td>
@@ -61,7 +63,7 @@ function Cart() {
                             <strong className="cart__container--table_rows-cell__price"> $ 24.00 </strong>
                         </td>
                         <td className="cart__container--table_rows-cell">
-                            <button className="cart__container--table_rows-cell__trash">
+                            <button className="cart__container--table_rows-cell__trash" style={{border: "none"}}>
                                 <img src="/assets/icon/trash.svg" className="cart__container--table_rows-cell__trash--icon" />
                             </button>
                         </td>
@@ -82,7 +84,11 @@ function Cart() {
                         <i className="cart__container--check_block-text"> Total </i>
                         <strong className="cart__container--check_block-price"> $ 99.00 </strong>
                     </div>
-                    <button className="cart__container--check_btn"> Checkout Now </button>
+                    <button className="cart__container--check_btn" onClick={
+                        () => {
+                            navigate("/checkout")
+                        }
+                    }> Checkout Now </button>
                 </div>
             </div>
             <div className="subscribe">

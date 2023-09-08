@@ -1,5 +1,6 @@
 import React from 'react'
 import './global.css'
+import { useNavigate } from 'react-router-dom'
 import { BrowserRouter as Router, Routes, Route, Link, Navigate } from 'react-router-dom'
 
 import Header from './components/Header/Header'
@@ -25,15 +26,6 @@ function App() {
   return (
     <div className="App">
       <Header />
-
-      {/* 01 Wishlist | HTML & SCSS */}
-      {/* 02 Team | HTML & SCSS */}
-      {/* 03 Blog | HTML & SCSS */}
-      {/* 04 BlogDetails | HTML & SCSS */}
-      {/* 05 Contact | HTML & SCSS */}
-      {/* 06 About | HTML & SCSS */}
-      {/* 07 onclick  useNav for some buttons, lists, logo, icon also HTTP link for Social Media to each 11 pages, 2 components */}
-      {/* 08 fix some responsivity issues on 1280px width mobile view */}
 
       <Routes>
         <Route path="/" element={ <Homepage /> } />

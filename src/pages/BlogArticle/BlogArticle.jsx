@@ -1,8 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react'
 import './BlogArticle.css'
+import { useNavigate } from 'react-router-dom'
 import { BrowserRouter as Router, Routes, Route, Link, Navigate } from 'react-router-dom'
 
 function BlogArticle() {
+    const navigate = useNavigate()
     return (
         <section className="article">
             <h3 className="article__header"> Why should you choose good wood </h3>
@@ -29,7 +31,7 @@ function BlogArticle() {
                         ligula vivamus faucibus ac sociis cubilia neque, felis fringilla aenean hac eleifend tellus pellentesque quis 
                         suspendisse. Sociosqu suscipit sodales taciti rutrum condimentum conubia volutpat cubilia mi, velit curabitur 
                         consequat proin neque commodo interdum eleifend dui, ac magna leo ridiculus facilisi duis sapien etiam.
-                        <br />
+                        <br /> <br />
                         Lorem ipsum dolor sit amet consectetur adipiscing elit dictumst posuere, lectus dis vehicula augue elementum 
                         quam risus. Placerat dictum lobortis lacinia volutpat morbi cum justo commodo est aliquam, facilisi consequat 
                         ligula vivamus faucibus ac sociis cubilia neque.
@@ -43,11 +45,11 @@ function BlogArticle() {
                         faucibus odio molestie semper, venenatis urna mollis libero praesent cum nec.
                     </article>
                     <div className="article__container--main_moreimages">
-                        <img src="/assets/product/product_01.png" alt="p1" className="article__container--main_moreimages-content" />
-                        <img src="/assets/product/product_02.png" alt="p2" className="article__container--main_moreimages-content" />
+                        <img src="/assets/blog/p1.png" alt="p1" className="article__container--main_moreimages-content" />
+                        <img src="/assets/blog/p2.png" alt="p2" className="article__container--main_moreimages-content" />
                     </div>
                     <div className="article__container--main_tags">
-                        Tag:
+                        Tag :
                         <button className="article__container--main_tags-btn"> Chair </button>
                         <button className="article__container--main_tags-btn"> Lamp </button>
                         <button className="article__container--main_tags-btn"> Minimalist </button>
@@ -86,29 +88,45 @@ function BlogArticle() {
                     </div>
                     <div className="article__container--navigation_post">
                         <h4 className="article__container--navigation_post-header"> Recent Post </h4>
-                        <div className="article__container--navigation_post-card">
-                            <img src="/assets/blog/recent_01" alt="recent_01" className="article__container--navigation_post-card__img" />
+                        <div className="article__container--navigation_post-card" style={{cursor: "pointer"}} onClick={
+                            () => {
+                                navigate("/blog")
+                            }
+                        }>
+                            <img src="/assets/blog/recent_01.png" alt="recent_01" className="article__container--navigation_post-card__img" />
                             <span className="article__container--navigation_post-card__info">
                                 <h5 className="article__container--navigation_post-card__info--name"> How to choose a chair at home </h5>
                                 <p className="article__container--navigation_post-card__info--date"> December 27, 2021 </p>
                             </span>
                         </div>
-                        <div className="article__container--navigation_post-card">
-                            <img src="/assets/blog/recent_02" alt="recent_02" className="article__container--navigation_post-card__img" />
+                        <div className="article__container--navigation_post-card" style={{cursor: "pointer"}} onClick={
+                            () => {
+                                navigate("/blog")
+                            }
+                        }>
+                            <img src="/assets/blog/recent_02.png" alt="recent_02" className="article__container--navigation_post-card__img" />
                             <span className="article__container--navigation_post-card__info">
                                 <h5 className="article__container--navigation_post-card__info--name"> How to choose a chair at home </h5>
                                 <p className="article__container--navigation_post-card__info--date"> December 27, 2021 </p>
                             </span>
                         </div>
-                        <div className="article__container--navigation_post-card">
-                            <img src="/assets/blog/recent_03" alt="recent_03" className="article__container--navigation_post-card__img" />
+                        <div className="article__container--navigation_post-card" style={{cursor: "pointer"}} onClick={
+                            () => {
+                                navigate("/blog")
+                            }
+                        }>
+                            <img src="/assets/blog/recent_03.png" alt="recent_03" className="article__container--navigation_post-card__img" />
                             <span className="article__container--navigation_post-card__info">
                                 <h5 className="article__container--navigation_post-card__info--name"> How to choose a chair at home </h5>
                                 <p className="article__container--navigation_post-card__info--date"> December 27, 2021 </p>
                             </span>
                         </div>
-                        <div className="article__container--navigation_post-card">
-                            <img src="/assets/blog/recent_04" alt="recent_04" className="article__container--navigation_post-card__img" />
+                        <div className="article__container--navigation_post-card" style={{cursor: "pointer"}} onClick={
+                            () => {
+                                navigate("/blog")
+                            }
+                        }>
+                            <img src="/assets/blog/recent_04.png" alt="recent_04" className="article__container--navigation_post-card__img" />
                             <span className="article__container--navigation_post-card__info">
                                 <h5 className="article__container--navigation_post-card__info--name"> How to choose a chair at home </h5>
                                 <p className="article__container--navigation_post-card__info--date"> December 27, 2021 </p>
@@ -163,7 +181,11 @@ function BlogArticle() {
                     <h3 className="blog__info--title articleheader"> Other Blogs </h3>
                 </div>
                 <div className="blog__container">
-                    <div className="blog__container--cards">
+                    <div className="blog__container--cards" onClick={
+                        () => {
+                            navigate("/blog")
+                        }
+                    }>
                         <img src="/assets/blog/blog_01.png" alt="blog-01" className="blog__container--cards_image" />
                         <h5 className="blog__container--cards_header"> Why should you choose good wood </h5>
                         <div className="blog__container--cards_details">
@@ -185,7 +207,11 @@ function BlogArticle() {
                             Read More
                         </button>
                     </div>
-                    <div className="blog__container--cards">
+                    <div className="blog__container--cards" onClick={
+                        () => {
+                            navigate("/blog")
+                        }
+                    }>
                         <img src="/assets/blog/blog_02.png" alt="blog-02" className="blog__container--cards_image" />
                         <h5 className="blog__container--cards_header"> Why should you choose good wood </h5>
                         <div className="blog__container--cards_details">
@@ -207,7 +233,11 @@ function BlogArticle() {
                             Read More
                         </button>
                     </div>
-                    <div className="blog__container--cards">
+                    <div className="blog__container--cards" onClick={
+                        () => {
+                            navigate("/blog")
+                        }
+                    }>
                         <img src="/assets/blog/blog_03.png" alt="blog-03" className="blog__container--cards_image" />
                         <h5 className="blog__container--cards_header"> Why should you choose good wood </h5>
                         <div className="blog__container--cards_details">
@@ -232,7 +262,7 @@ function BlogArticle() {
                 </div>
                 {/* replace with BlogCard */}
             </div>
-            <div className="home__sectors subscribe">
+            <div className="home__sectors subscribe" style={{width: "110%"}}>
                 <div className="subscribe__rectangle"></div>
                 <div className="subscribe__container">
                     <h4 className="subscribe__container--header"> Subscribe now and get 10% off all items </h4>

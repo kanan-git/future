@@ -1,8 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react'
 import './Homepage.css'
+import { useNavigate } from 'react-router-dom'
 import { BrowserRouter as Router, Routes, Route, Link, Navigate } from 'react-router-dom'
 
 function Homepage() {
+    const navigate = useNavigate()
     return (
         <section className="home">
             <div className="home__sectors head">
@@ -12,7 +14,11 @@ function Homepage() {
                         new collecitons
                         <img src="/assets/icon/vector.svg" alt="vector" className="head__container--colour_icon" />
                     </strong> of furniture to decorate the corner of your house. </h4>
-                    <button className="head__container--btn"> Shop Now </button>
+                    <button className="head__container--btn" onClick={
+                        () => {
+                            navigate("/shop")
+                        }
+                    }> Shop Now </button>
                 </div>
                 <img src="/assets/homepage/nathan-oakley.png" alt="nathan-oakley" className="head__content" />
                 {/* replace with Banner */}
@@ -33,7 +39,11 @@ function Homepage() {
                     <div className="highlight__cards--container">
                         <p className="highlight__cards--container_title"> Living Room </p>
                         <h4 className="highlight__cards--container_description"> The best foam padded chair </h4>
-                        <button className="highlight__cards--container_button"> Shop Now </button>
+                        <button className="highlight__cards--container_button" onClick={
+                            () => {
+                                navigate("/shop")
+                            }
+                        }> Shop Now </button>
                     </div>
                     <img src="/assets/homepage/sam-moghadam.png" alt="sam-moghadam" className="highlight__cards--image" style={{alignSelf: "center"}} />
                 </span>
@@ -41,7 +51,11 @@ function Homepage() {
                     <div className="highlight__cards--container">
                         <p className="highlight__cards--container_title"> Living Room </p>
                         <h4 className="highlight__cards--container_description"> Latest model chandelier </h4>
-                        <button className="highlight__cards--container_button"> Shop Now </button>
+                        <button className="highlight__cards--container_button" onClick={
+                            () => {
+                                navigate("/shop")
+                            }
+                        }> Shop Now </button>
                     </div>
                     <img src="/assets/homepage/phil-desforges.png" alt="phil-desforges" className="highlight__cards--image" />
                 </span>
@@ -52,7 +66,11 @@ function Homepage() {
                     <p className="newproduct__info--description"> Made of the best materials and with a design that follows the times </p>
                 </div>
                 <div className="newproduct__container">
-                    <div className="productcard" id="product_01">
+                    <div className="productcard" id="product_01" onClick={
+                            () => {
+                                navigate("/shop")
+                            }
+                        }>
                         <img src="/assets/product/product_01.png" alt="product-01" className="productcard__image" />
                         <div className="productcard__tag"> New </div>
                         <div className="productcard__group">
@@ -71,7 +89,11 @@ function Homepage() {
                             </div>
                         </div>
                     </div>
-                    <div className="productcard" id="product_02">
+                    <div className="productcard" id="product_02" onClick={
+                            () => {
+                                navigate("/shop")
+                            }
+                        }>
                         <img src="/assets/product/product_02.png" alt="product-02" className="productcard__image" />
                         <div className="productcard__tag"> New </div>
                         <div className="productcard__group">
@@ -90,7 +112,11 @@ function Homepage() {
                             </div>
                         </div>
                     </div>
-                    <div className="productcard" id="product_03">
+                    <div className="productcard" id="product_03" onClick={
+                            () => {
+                                navigate("/shop")
+                            }
+                        }>
                         <img src="/assets/product/product_03.png" alt="product-03" className="productcard__image" />
                         <div className="productcard__tag"> New </div>
                         <div className="productcard__group">
@@ -109,7 +135,11 @@ function Homepage() {
                             </div>
                         </div>
                     </div>
-                    <div className="productcard" id="product_04">
+                    <div className="productcard" id="product_04" onClick={
+                            () => {
+                                navigate("/shop")
+                            }
+                        }>
                         <img src="/assets/product/product_04.png" alt="product-04" className="productcard__image" />
                         <div className="productcard__tag"> New </div>
                         <div className="productcard__group">
@@ -128,7 +158,11 @@ function Homepage() {
                             </div>
                         </div>
                     </div>
-                    <div className="productcard" id="product_05">
+                    <div className="productcard" id="product_05" onClick={
+                            () => {
+                                navigate("/shop")
+                            }
+                        }>
                         <img src="/assets/product/product_05.png" alt="product-05" className="productcard__image" />
                         <div className="productcard__tag"> New </div>
                         <div className="productcard__group">
@@ -147,7 +181,11 @@ function Homepage() {
                             </div>
                         </div>
                     </div>
-                    <div className="productcard" id="product_06">
+                    <div className="productcard" id="product_06" onClick={
+                            () => {
+                                navigate("/shop")
+                            }
+                        }>
                         <img src="/assets/product/product_06.png" alt="product-06" className="productcard__image" />
                         <div className="productcard__tag"> New </div>
                         <div className="productcard__group">
@@ -217,7 +255,11 @@ function Homepage() {
                 <div className="banner__container">
                     <p className="banner__container--title"> Interior Modern </p>
                     <h4 className="banner__container--description"> Arrange your home in such a way with our modern interiors </h4>
-                    <button className="banner__container--btn"> Shop Now </button>
+                    <button className="banner__container--btn" onClick={
+                        () => {
+                            navigate("/shop")
+                        }
+                    }> Shop Now </button>
                 </div>
                 <img src="/assets/homepage/inside-weather.png" alt="inside-weather" className="banner__content" />
                 {/* replace with Banner */}
@@ -238,7 +280,11 @@ function Homepage() {
                     </button>
                 </div>
                 <div className="products__container">
-                    <div className="productcard" id="p_01">
+                    <div className="productcard" id="p_01" onClick={
+                        () => {
+                            navigate("/shop")
+                        }
+                    }>
                         <img src="/assets/product/product_01.png" alt="product-01" className="productcard__image" />
                         <div className="productcard__group">
                             <button className="productcard__group--btn">
@@ -256,7 +302,11 @@ function Homepage() {
                             </div>
                         </div>
                     </div>
-                    <div className="productcard" id="p_02">
+                    <div className="productcard" id="p_02" onClick={
+                        () => {
+                            navigate("/shop")
+                        }
+                    }>
                         <img src="/assets/product/product_02.png" alt="product-02" className="productcard__image" />
                         <div className="productcard__group">
                             <button className="productcard__group--btn">
@@ -274,7 +324,11 @@ function Homepage() {
                             </div>
                         </div>
                     </div>
-                    <div className="productcard" id="p_03">
+                    <div className="productcard" id="p_03" onClick={
+                        () => {
+                            navigate("/shop")
+                        }
+                    }>
                         <img src="/assets/product/product_03.png" alt="product-03" className="productcard__image" />
                         <div className="productcard__group">
                             <button className="productcard__group--btn">
@@ -292,7 +346,11 @@ function Homepage() {
                             </div>
                         </div>
                     </div>
-                    <div className="productcard" id="p_04">
+                    <div className="productcard" id="p_04" onClick={
+                        () => {
+                            navigate("/shop")
+                        }
+                    }>
                         <img src="/assets/product/product_04.png" alt="product-04" className="productcard__image" />
                         <div className="productcard__group">
                             <button className="productcard__group--btn">
@@ -310,7 +368,11 @@ function Homepage() {
                             </div>
                         </div>
                     </div>
-                    <div className="productcard" id="p_05">
+                    <div className="productcard" id="p_05" onClick={
+                        () => {
+                            navigate("/shop")
+                        }
+                    }>
                         <img src="/assets/product/product_05.png" alt="product-05" className="productcard__image" />
                         <div className="productcard__group">
                             <button className="productcard__group--btn">
@@ -328,7 +390,11 @@ function Homepage() {
                             </div>
                         </div>
                     </div>
-                    <div className="productcard" id="p_06">
+                    <div className="productcard" id="p_06" onClick={
+                        () => {
+                            navigate("/shop")
+                        }
+                    }>
                         <img src="/assets/product/product_06.png" alt="product-06" className="productcard__image" />
                         <div className="productcard__group">
                             <button className="productcard__group--btn">
@@ -346,7 +412,11 @@ function Homepage() {
                             </div>
                         </div>
                     </div>
-                    <div className="productcard" id="p_07">
+                    <div className="productcard" id="p_07" onClick={
+                        () => {
+                            navigate("/shop")
+                        }
+                    }>
                         <img src="/assets/product/product_07.png" alt="product-07" className="productcard__image" />
                         <div className="productcard__group">
                             <button className="productcard__group--btn">
@@ -364,7 +434,11 @@ function Homepage() {
                             </div>
                         </div>
                     </div>
-                    <div className="productcard" id="p_08">
+                    <div className="productcard" id="p_08" onClick={
+                        () => {
+                            navigate("/shop")
+                        }
+                    }>
                         <img src="/assets/product/product_08.png" alt="product-08" className="productcard__image" />
                         <div className="productcard__group">
                             <button className="productcard__group--btn">
@@ -385,7 +459,7 @@ function Homepage() {
                     {/* replace with ProductCard */}
                 </div>
             </div>
-            <div className="home__sectors aboutdelivery">
+            <div className="home__sectors aboutdelivery" style={{marginBottom: "50px"}}>
                 <div className="aboutdelivery__container">
                     <h4 className="aboutdelivery__container--header"> We guarantee the safety of your shopping </h4>
                     <div className="aboutdelivery__container--group">
@@ -426,7 +500,11 @@ function Homepage() {
                     from tips and what things I need to pay attention to when choosing furniture </p>
                 </div>
                 <div className="blog__container">
-                    <div className="blog__container--cards">
+                    <div className="blog__container--cards" onClick={
+                        () => {
+                            navigate("/blog")
+                        }
+                    }>
                         <img src="/assets/blog/blog_01.png" alt="blog-01" className="blog__container--cards_image" />
                         <h5 className="blog__container--cards_header"> Why should you choose good wood </h5>
                         <div className="blog__container--cards_details">
@@ -448,7 +526,11 @@ function Homepage() {
                             Read More
                         </button>
                     </div>
-                    <div className="blog__container--cards">
+                    <div className="blog__container--cards" onClick={
+                        () => {
+                            navigate("/blog")
+                        }
+                    }>
                         <img src="/assets/blog/blog_02.png" alt="blog-02" className="blog__container--cards_image" />
                         <h5 className="blog__container--cards_header"> Why should you choose good wood </h5>
                         <div className="blog__container--cards_details">
@@ -470,7 +552,11 @@ function Homepage() {
                             Read More
                         </button>
                     </div>
-                    <div className="blog__container--cards">
+                    <div className="blog__container--cards" onClick={
+                        () => {
+                            navigate("/blog")
+                        }
+                    }>
                         <img src="/assets/blog/blog_03.png" alt="blog-03" className="blog__container--cards_image" />
                         <h5 className="blog__container--cards_header"> Why should you choose good wood </h5>
                         <div className="blog__container--cards_details">

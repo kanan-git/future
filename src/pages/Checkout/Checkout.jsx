@@ -1,8 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react'
 import './Checkout.css'
+import { useNavigate } from 'react-router-dom'
 import { BrowserRouter as Router, Routes, Route, Link, Navigate } from 'react-router-dom'
 
 function Checkout() {
+    const navigate = useNavigate()
     return (
         <section className="checkout">
             <h3 className="checkout__header"> Checkout </h3>
