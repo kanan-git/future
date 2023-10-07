@@ -5,6 +5,32 @@ import { BrowserRouter as Router, Routes, Route, Link, Navigate } from 'react-ro
 
 function Homepage() {
     const navigate = useNavigate()
+    const [currentPage, setCurrentPage] = useState(1)
+    const [selectedTab, setSelectedTab] = useState(1)
+    const itemPerPage = 8 // (3 group carousel)
+    const newestArr = []
+    for(var i=0; i<24; i++) {newestArr.push(i)}
+    const totalProducts = 24
+    const totalPages = totalProducts / itemPerPage
+    const startIndex = (currentPage - 1) * itemPerPage
+    const endIndex = startIndex + itemPerPage
+    const currentProducts = newestArr.slice(startIndex, endIndex)
+    const pArray = [0, 1, 2, 3, 4, 5, 6, 7]
+
+    if(JSON.parse(localStorage.getItem("user")) == null) {
+        localStorage.setItem("user", JSON.stringify({
+            fullname: "Dedeqorquuud ?",
+            comment: ""
+        }))
+    }
+
+    if(JSON.parse(localStorage.getItem("wishlist")) == null) {
+        localStorage.setItem("wishlist", JSON.stringify([]))
+    }
+    if(JSON.parse(localStorage.getItem("cart")) == null) {
+        localStorage.setItem("cart", JSON.stringify([]))
+    }
+
     return (
         <section className="home">
             <div className="home__sectors head">
@@ -66,188 +92,51 @@ function Homepage() {
                     <p className="newproduct__info--description"> Made of the best materials and with a design that follows the times </p>
                 </div>
                 <div className="newproduct__container">
-                    <div className="productcard" id="product_01" onClick={
-                            () => {
-                                navigate("/shop")
-                            }
-                        }>
-                        <img src="/assets/product/product_01.png" alt="product-01" className="productcard__image" />
-                        <div className="productcard__tag"> New </div>
-                        <div className="productcard__group">
-                            <button className="productcard__group--btn">
-                                <img src="/assets/icon/add2fav.svg" alt="fav" className="productcard__group--btn_icon" />
-                            </button>
-                            <button className="productcard__group--btn">
-                                <img src="/assets/icon/add2cart.svg" alt="cart" className="productcard__group--btn_icon" />
-                            </button>
-                        </div>
-                        <div className="productcard__info">
-                            <div className="productcard__info--category"> Living Room </div>
-                            <div className="productcard__info--main">
-                                <p className="productcard__info--main_name"> Teak wood chair </p>
-                                <strong className="productcard__info--main_price"> $24 </strong>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="productcard" id="product_02" onClick={
-                            () => {
-                                navigate("/shop")
-                            }
-                        }>
-                        <img src="/assets/product/product_02.png" alt="product-02" className="productcard__image" />
-                        <div className="productcard__tag"> New </div>
-                        <div className="productcard__group">
-                            <button className="productcard__group--btn">
-                                <img src="/assets/icon/add2fav.svg" alt="fav" className="productcard__group--btn_icon" />
-                            </button>
-                            <button className="productcard__group--btn">
-                                <img src="/assets/icon/add2cart.svg" alt="cart" className="productcard__group--btn_icon" />
-                            </button>
-                        </div>
-                        <div className="productcard__info">
-                            <div className="productcard__info--category"> Living Room </div>
-                            <div className="productcard__info--main">
-                                <p className="productcard__info--main_name"> Teak wood chair </p>
-                                <strong className="productcard__info--main_price"> $24 </strong>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="productcard" id="product_03" onClick={
-                            () => {
-                                navigate("/shop")
-                            }
-                        }>
-                        <img src="/assets/product/product_03.png" alt="product-03" className="productcard__image" />
-                        <div className="productcard__tag"> New </div>
-                        <div className="productcard__group">
-                            <button className="productcard__group--btn">
-                                <img src="/assets/icon/add2fav.svg" alt="fav" className="productcard__group--btn_icon" />
-                            </button>
-                            <button className="productcard__group--btn">
-                                <img src="/assets/icon/add2cart.svg" alt="cart" className="productcard__group--btn_icon" />
-                            </button>
-                        </div>
-                        <div className="productcard__info">
-                            <div className="productcard__info--category"> Living Room </div>
-                            <div className="productcard__info--main">
-                                <p className="productcard__info--main_name"> Teak wood chair </p>
-                                <strong className="productcard__info--main_price"> $24 </strong>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="productcard" id="product_04" onClick={
-                            () => {
-                                navigate("/shop")
-                            }
-                        }>
-                        <img src="/assets/product/product_04.png" alt="product-04" className="productcard__image" />
-                        <div className="productcard__tag"> New </div>
-                        <div className="productcard__group">
-                            <button className="productcard__group--btn">
-                                <img src="/assets/icon/add2fav.svg" alt="fav" className="productcard__group--btn_icon" />
-                            </button>
-                            <button className="productcard__group--btn">
-                                <img src="/assets/icon/add2cart.svg" alt="cart" className="productcard__group--btn_icon" />
-                            </button>
-                        </div>
-                        <div className="productcard__info">
-                            <div className="productcard__info--category"> Living Room </div>
-                            <div className="productcard__info--main">
-                                <p className="productcard__info--main_name"> Teak wood chair </p>
-                                <strong className="productcard__info--main_price"> $24 </strong>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="productcard" id="product_05" onClick={
-                            () => {
-                                navigate("/shop")
-                            }
-                        }>
-                        <img src="/assets/product/product_05.png" alt="product-05" className="productcard__image" />
-                        <div className="productcard__tag"> New </div>
-                        <div className="productcard__group">
-                            <button className="productcard__group--btn">
-                                <img src="/assets/icon/add2fav.svg" alt="fav" className="productcard__group--btn_icon" />
-                            </button>
-                            <button className="productcard__group--btn">
-                                <img src="/assets/icon/add2cart.svg" alt="cart" className="productcard__group--btn_icon" />
-                            </button>
-                        </div>
-                        <div className="productcard__info">
-                            <div className="productcard__info--category"> Living Room </div>
-                            <div className="productcard__info--main">
-                                <p className="productcard__info--main_name"> Teak wood chair </p>
-                                <strong className="productcard__info--main_price"> $24 </strong>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="productcard" id="product_06" onClick={
-                            () => {
-                                navigate("/shop")
-                            }
-                        }>
-                        <img src="/assets/product/product_06.png" alt="product-06" className="productcard__image" />
-                        <div className="productcard__tag"> New </div>
-                        <div className="productcard__group">
-                            <button className="productcard__group--btn">
-                                <img src="/assets/icon/add2fav.svg" alt="fav" className="productcard__group--btn_icon" />
-                            </button>
-                            <button className="productcard__group--btn">
-                                <img src="/assets/icon/add2cart.svg" alt="cart" className="productcard__group--btn_icon" />
-                            </button>
-                        </div>
-                        <div className="productcard__info">
-                            <div className="productcard__info--category"> Living Room </div>
-                            <div className="productcard__info--main">
-                                <p className="productcard__info--main_name"> Teak wood chair </p>
-                                <strong className="productcard__info--main_price"> $24 </strong>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="productcard" id="product_07">
-                        <img src="/assets/product/product_07.png" alt="product-07" className="productcard__image" />
-                        <div className="productcard__tag"> New </div>
-                        <div className="productcard__group">
-                            <button className="productcard__group--btn">
-                                <img src="/assets/icon/add2fav.svg" alt="fav" className="productcard__group--btn_icon" />
-                            </button>
-                            <button className="productcard__group--btn">
-                                <img src="/assets/icon/add2cart.svg" alt="cart" className="productcard__group--btn_icon" />
-                            </button>
-                        </div>
-                        <div className="productcard__info">
-                            <div className="productcard__info--category"> Living Room </div>
-                            <div className="productcard__info--main">
-                                <p className="productcard__info--main_name"> Teak wood chair </p>
-                                <strong className="productcard__info--main_price"> $24 </strong>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="productcard" id="product_08">
-                        <img src="/assets/product/product_08.png" alt="product-08" className="productcard__image" />
-                        <div className="productcard__tag"> New </div>
-                        <div className="productcard__group">
-                            <button className="productcard__group--btn">
-                                <img src="/assets/icon/add2fav.svg" alt="fav" className="productcard__group--btn_icon" />
-                            </button>
-                            <button className="productcard__group--btn">
-                                <img src="/assets/icon/add2cart.svg" alt="cart" className="productcard__group--btn_icon" />
-                            </button>
-                        </div>
-                        <div className="productcard__info">
-                            <div className="productcard__info--category"> Living Room </div>
-                            <div className="productcard__info--main">
-                                <p className="productcard__info--main_name"> Teak wood chair </p>
-                                <strong className="productcard__info--main_price"> $24 </strong>
-                            </div>
-                        </div>
-                    </div>
-                    {/* replace with ProductCard */}
+                    {
+                        currentProducts.map(
+                            (index) => 
+                                <div className="productcard" id={`product_${index}`} key={index} onClick={() => {navigate("/shop")}}>
+                                    <img src={`/assets/product/product_${index+1}.png`} alt={`product-0${index+1}`} className="productcard__image" />
+                                    <div className="productcard__tag"> New </div>
+                                    <div className="productcard__group">
+                                        <button className="productcard__group--btn">
+                                            <img src="/assets/icon/add2fav.svg" alt="fav" className="productcard__group--btn_icon" />
+                                        </button>
+                                        <button className="productcard__group--btn">
+                                            <img src="/assets/icon/add2cart.svg" alt="cart" className="productcard__group--btn_icon" />
+                                        </button>
+                                    </div>
+                                    <div className="productcard__info">
+                                        <div className="productcard__info--category"> Living Room </div>
+                                        <div className="productcard__info--main">
+                                            <p className="productcard__info--main_name"> Teak wood chair {index+1} </p>
+                                            <strong className="productcard__info--main_price"> $24 </strong>
+                                        </div>
+                                    </div>
+                                </div>
+                        )
+                    }
+                    {/* replace with ProductCard component */}
                 </div>
                 <div className="newproduct__pagination">
-                    <div className="newproduct__pagination--dots"></div>
-                    <div className="newproduct__pagination--dots"></div>
-                    <div className="newproduct__pagination--dots"></div>
+                    <div className="newproduct__pagination--dots" id="d1" onClick={(e) => {
+                        setCurrentPage(1)
+                        e.target.style.backgroundColor = `#265E55`
+                        document.getElementById("d2").style.backgroundColor = `#DBEFED`
+                        document.getElementById("d3").style.backgroundColor = `#DBEFED`
+                    }}></div>
+                    <div className="newproduct__pagination--dots" id="d2" onClick={(e) => {
+                        setCurrentPage(2)
+                        e.target.style.backgroundColor = `#265E55`
+                        document.getElementById("d1").style.backgroundColor = `#DBEFED`
+                        document.getElementById("d3").style.backgroundColor = `#DBEFED`
+                    }}></div>
+                    <div className="newproduct__pagination--dots" id="d3" onClick={(e) => {
+                        setCurrentPage(3)
+                        e.target.style.backgroundColor = `#265E55`
+                        document.getElementById("d1").style.backgroundColor = `#DBEFED`
+                        document.getElementById("d2").style.backgroundColor = `#DBEFED`
+                    }}></div>
                 </div>
             </div>
             <div className="home__sectors banner">
@@ -266,196 +155,58 @@ function Homepage() {
             </div>
             <div className="home__sectors products">
                 <div className="products__selections">
-                    <button className="products__selections--btn">
+                    <button className="products__selections--btn" id="newarrival" onClick={(e) => {
+                        e.target.style.color = `var(--darkslategray)`
+                        document.getElementById("toprated").style.color = `var(--default)`
+                        document.getElementById("featured").style.color = `var(--default)`
+                        setSelectedTab(1)
+                    }}>
                         New Arrival
-                        <img src="/assets/icon/selected.svg" alt="rectangle" className="products__selections--btn_icon" />
+                        { selectedTab == 1 && <img src="/assets/icon/selected.svg" alt="rectangle" className="products__selections--btn_icon" /> }
                     </button>
-                    <button className="products__selections--btn">
+                    <button className="products__selections--btn" id="toprated" onClick={(e) => {
+                        e.target.style.color = `var(--darkslategray)`
+                        document.getElementById("newarrival").style.color = `var(--default)`
+                        document.getElementById("featured").style.color = `var(--default)`
+                        setSelectedTab(2)
+                    }}>
                         Top Rated
-                        {/* <img src="/assets/icon/selected.svg" alt="rectangle" className="products__selections--btn_icon" /> */}
+                        { selectedTab == 2 && <img src="/assets/icon/selected.svg" alt="rectangle" className="products__selections--btn_icon" /> }
                     </button>
-                    <button className="products__selections--btn">
+                    <button className="products__selections--btn" id="featured" onClick={(e) => {
+                        e.target.style.color = `var(--darkslategray)`
+                        document.getElementById("newarrival").style.color = `var(--default)`
+                        document.getElementById("toprated").style.color = `var(--default)`
+                        setSelectedTab(3)
+                    }}>
                         Featured
-                        {/* <img src="/assets/icon/selected.svg" alt="rectangle" className="products__selections--btn_icon" /> */}
+                        { selectedTab == 3 && <img src="/assets/icon/selected.svg" alt="rectangle" className="products__selections--btn_icon" /> }
                     </button>
                 </div>
                 <div className="products__container">
-                    <div className="productcard" id="p_01" onClick={
-                        () => {
-                            navigate("/shop")
-                        }
-                    }>
-                        <img src="/assets/product/product_01.png" alt="product-01" className="productcard__image" />
-                        <div className="productcard__group">
-                            <button className="productcard__group--btn">
-                                <img src="/assets/icon/add2fav.svg" alt="fav" className="productcard__group--btn_icon" />
-                            </button>
-                            <button className="productcard__group--btn">
-                                <img src="/assets/icon/add2cart.svg" alt="cart" className="productcard__group--btn_icon" />
-                            </button>
-                        </div>
-                        <div className="productcard__info">
-                            <div className="productcard__info--category"> Living Room </div>
-                            <div className="productcard__info--main">
-                                <p className="productcard__info--main_name"> Teak wood chair </p>
-                                <strong className="productcard__info--main_price"> $24 </strong>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="productcard" id="p_02" onClick={
-                        () => {
-                            navigate("/shop")
-                        }
-                    }>
-                        <img src="/assets/product/product_02.png" alt="product-02" className="productcard__image" />
-                        <div className="productcard__group">
-                            <button className="productcard__group--btn">
-                                <img src="/assets/icon/add2fav.svg" alt="fav" className="productcard__group--btn_icon" />
-                            </button>
-                            <button className="productcard__group--btn">
-                                <img src="/assets/icon/add2cart.svg" alt="cart" className="productcard__group--btn_icon" />
-                            </button>
-                        </div>
-                        <div className="productcard__info">
-                            <div className="productcard__info--category"> Living Room </div>
-                            <div className="productcard__info--main">
-                                <p className="productcard__info--main_name"> Teak wood chair </p>
-                                <strong className="productcard__info--main_price"> $24 </strong>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="productcard" id="p_03" onClick={
-                        () => {
-                            navigate("/shop")
-                        }
-                    }>
-                        <img src="/assets/product/product_03.png" alt="product-03" className="productcard__image" />
-                        <div className="productcard__group">
-                            <button className="productcard__group--btn">
-                                <img src="/assets/icon/add2fav.svg" alt="fav" className="productcard__group--btn_icon" />
-                            </button>
-                            <button className="productcard__group--btn">
-                                <img src="/assets/icon/add2cart.svg" alt="cart" className="productcard__group--btn_icon" />
-                            </button>
-                        </div>
-                        <div className="productcard__info">
-                            <div className="productcard__info--category"> Living Room </div>
-                            <div className="productcard__info--main">
-                                <p className="productcard__info--main_name"> Teak wood chair </p>
-                                <strong className="productcard__info--main_price"> $24 </strong>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="productcard" id="p_04" onClick={
-                        () => {
-                            navigate("/shop")
-                        }
-                    }>
-                        <img src="/assets/product/product_04.png" alt="product-04" className="productcard__image" />
-                        <div className="productcard__group">
-                            <button className="productcard__group--btn">
-                                <img src="/assets/icon/add2fav.svg" alt="fav" className="productcard__group--btn_icon" />
-                            </button>
-                            <button className="productcard__group--btn">
-                                <img src="/assets/icon/add2cart.svg" alt="cart" className="productcard__group--btn_icon" />
-                            </button>
-                        </div>
-                        <div className="productcard__info">
-                            <div className="productcard__info--category"> Living Room </div>
-                            <div className="productcard__info--main">
-                                <p className="productcard__info--main_name"> Teak wood chair </p>
-                                <strong className="productcard__info--main_price"> $24 </strong>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="productcard" id="p_05" onClick={
-                        () => {
-                            navigate("/shop")
-                        }
-                    }>
-                        <img src="/assets/product/product_05.png" alt="product-05" className="productcard__image" />
-                        <div className="productcard__group">
-                            <button className="productcard__group--btn">
-                                <img src="/assets/icon/add2fav.svg" alt="fav" className="productcard__group--btn_icon" />
-                            </button>
-                            <button className="productcard__group--btn">
-                                <img src="/assets/icon/add2cart.svg" alt="cart" className="productcard__group--btn_icon" />
-                            </button>
-                        </div>
-                        <div className="productcard__info">
-                            <div className="productcard__info--category"> Living Room </div>
-                            <div className="productcard__info--main">
-                                <p className="productcard__info--main_name"> Teak wood chair </p>
-                                <strong className="productcard__info--main_price"> $24 </strong>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="productcard" id="p_06" onClick={
-                        () => {
-                            navigate("/shop")
-                        }
-                    }>
-                        <img src="/assets/product/product_06.png" alt="product-06" className="productcard__image" />
-                        <div className="productcard__group">
-                            <button className="productcard__group--btn">
-                                <img src="/assets/icon/add2fav.svg" alt="fav" className="productcard__group--btn_icon" />
-                            </button>
-                            <button className="productcard__group--btn">
-                                <img src="/assets/icon/add2cart.svg" alt="cart" className="productcard__group--btn_icon" />
-                            </button>
-                        </div>
-                        <div className="productcard__info">
-                            <div className="productcard__info--category"> Living Room </div>
-                            <div className="productcard__info--main">
-                                <p className="productcard__info--main_name"> Teak wood chair </p>
-                                <strong className="productcard__info--main_price"> $24 </strong>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="productcard" id="p_07" onClick={
-                        () => {
-                            navigate("/shop")
-                        }
-                    }>
-                        <img src="/assets/product/product_07.png" alt="product-07" className="productcard__image" />
-                        <div className="productcard__group">
-                            <button className="productcard__group--btn">
-                                <img src="/assets/icon/add2fav.svg" alt="fav" className="productcard__group--btn_icon" />
-                            </button>
-                            <button className="productcard__group--btn">
-                                <img src="/assets/icon/add2cart.svg" alt="cart" className="productcard__group--btn_icon" />
-                            </button>
-                        </div>
-                        <div className="productcard__info">
-                            <div className="productcard__info--category"> Living Room </div>
-                            <div className="productcard__info--main">
-                                <p className="productcard__info--main_name"> Teak wood chair </p>
-                                <strong className="productcard__info--main_price"> $24 </strong>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="productcard" id="p_08" onClick={
-                        () => {
-                            navigate("/shop")
-                        }
-                    }>
-                        <img src="/assets/product/product_08.png" alt="product-08" className="productcard__image" />
-                        <div className="productcard__group">
-                            <button className="productcard__group--btn">
-                                <img src="/assets/icon/add2fav.svg" alt="fav" className="productcard__group--btn_icon" />
-                            </button>
-                            <button className="productcard__group--btn">
-                                <img src="/assets/icon/add2cart.svg" alt="cart" className="productcard__group--btn_icon" />
-                            </button>
-                        </div>
-                        <div className="productcard__info">
-                            <div className="productcard__info--category"> Living Room </div>
-                            <div className="productcard__info--main">
-                                <p className="productcard__info--main_name"> Teak wood chair </p>
-                                <strong className="productcard__info--main_price"> $24 </strong>
-                            </div>
-                        </div>
-                    </div>
+                    {
+                        pArray.map(
+                            (index) => 
+                                <div className="productcard" id={`p_${index}`} key={index} onClick={() => {navigate("/shop")}}>
+                                    <img src={`/assets/product/product_${index+1}.png`} alt={`product-0${index+1}`} className="productcard__image" />
+                                    <div className="productcard__group">
+                                        <button className="productcard__group--btn">
+                                            <img src="/assets/icon/add2fav.svg" alt="fav" className="productcard__group--btn_icon" />
+                                        </button>
+                                        <button className="productcard__group--btn">
+                                            <img src="/assets/icon/add2cart.svg" alt="cart" className="productcard__group--btn_icon" />
+                                        </button>
+                                    </div>
+                                    <div className="productcard__info">
+                                        <div className="productcard__info--category"> Living Room </div>
+                                        <div className="productcard__info--main">
+                                            <p className="productcard__info--main_name"> Teak wood chair {selectedTab}:{index+1} </p>
+                                            <strong className="productcard__info--main_price"> $24 </strong>
+                                        </div>
+                                    </div>
+                                </div>
+                        )
+                    }
                     {/* replace with ProductCard */}
                 </div>
             </div>

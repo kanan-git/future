@@ -139,6 +139,9 @@
         row-gap: 20px;
         flex-wrap: wrap;
         justify-content: space-between;
+        @media only screen and (max-width: 1482px) {
+            width: 1260px;
+        }
     }
     &__pagination {
         width: 75px;
@@ -334,6 +337,9 @@
         flex-wrap: wrap;
         justify-content: space-between;
         row-gap: 20px;
+        @media only screen and (max-width: 1482px) {
+            width: 1250px;
+        }
     }
 }
 .aboutdelivery {
@@ -342,6 +348,9 @@
     justify-content: space-between;
     padding: 0 5%;
     margin-top: 100px;
+    @media only screen and (max-width: 1482px) {
+        padding: 0 4%;
+    }
     &__container {
         width: 570px;
         height: 640px;
@@ -412,6 +421,9 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
+        @media only screen and (max-width: 1482px) {
+            width: 1260px;
+        }
         &--cards {
             width: 417px;
             height: 685px;

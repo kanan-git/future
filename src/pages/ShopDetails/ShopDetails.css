@@ -112,10 +112,14 @@
 }
 .details__sector--cards {
   display: flex;
-  flex-wrap: wrap;
   gap: 15px;
   margin-top: 50px;
   margin-bottom: 50px;
+}
+@media only screen and (max-width: 1430px) {
+  .details__sector--cards {
+    width: 1260px;
+  }
 }
 .details__sector--pagination {
   width: 75px;
@@ -125,6 +129,7 @@
 .details__sector--pagination_dots {
   width: 15px;
   height: 15px;
+  cursor: pointer;
   border-radius: 50%;
   background-color: #D8EFED;
 }

@@ -14,6 +14,12 @@
   width: auto;
   display: flex;
   gap: 50px;
+  align-items: flex-start;
+}
+@media only screen and (max-width: 1430px) {
+  .cart__container {
+    gap: 35px;
+  }
 }
 .cart__container--table {
   width: 811px;

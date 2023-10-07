@@ -17,6 +17,7 @@
 .header__navbar--logo {
   width: auto;
   height: 32px;
+  cursor: pointer;
 }
 .header__navbar--logo_content {
   width: auto;
@@ -25,7 +26,7 @@
      object-fit: cover;
 }
 .header__navbar--list {
-  width: 30%;
+  width: 40%;
   cursor: pointer;
   display: flex;
   align-items: center;

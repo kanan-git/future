@@ -31,6 +31,7 @@
 }
 .blog__pagination--chevrons {
   width: auto;
+  cursor: pointer;
 }
 .blog__pagination--button {
   width: 35px;

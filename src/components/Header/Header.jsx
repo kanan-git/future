@@ -29,23 +29,26 @@ function Header() {
                             ...
                         </div>
                     </span>
-                    <span className="header__navbar--list_menu"onClick={
+                    <span className="header__navbar--list_menu" onClick={
                         () => {
                             navigate("/shop")
                         }
                     }> Shop </span>
-                    <span className="header__navbar--list_menu"onClick={
+                    <span className="header__navbar--list_menu" onClick={
                         () => {
                             navigate("/blog")
                         }
                     }> Blog </span>
-                    <span className="header__navbar--list_menu">
-                        Page
-                        <img src="/assets/icon/chevron-down.svg" alt="chevron" className="header__navbar--list_menu-icon" />
-                        <div className="header__navbar--list_menu-dropdown">
-                            ...
-                        </div>
-                    </span>
+                    <span className="header__navbar--list_menu" onClick={
+                        () => {
+                            navigate("/contact")
+                        }
+                    }> Contact Us </span>
+                    <span className="header__navbar--list_menu" onClick={
+                        () => {
+                            navigate("/about")
+                        }
+                    }> About </span>
                 </span>
                 <span className="header__navbar--icons">
                     <button className="header__navbar--icons_btn">

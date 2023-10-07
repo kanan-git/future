@@ -186,7 +186,7 @@ function BlogArticle() {
                             navigate("/blog")
                         }
                     }>
-                        <img src="/assets/blog/blog_01.png" alt="blog-01" className="blog__container--cards_image" />
+                        <img src="/assets/blog/blog_1.png" alt="blog-1" className="blog__container--cards_image" />
                         <h5 className="blog__container--cards_header"> Why should you choose good wood </h5>
                         <div className="blog__container--cards_details">
                             <span className="blog__container--cards_details-group">
@@ -212,7 +212,7 @@ function BlogArticle() {
                             navigate("/blog")
                         }
                     }>
-                        <img src="/assets/blog/blog_02.png" alt="blog-02" className="blog__container--cards_image" />
+                        <img src="/assets/blog/blog_2.png" alt="blog-2" className="blog__container--cards_image" />
                         <h5 className="blog__container--cards_header"> Why should you choose good wood </h5>
                         <div className="blog__container--cards_details">
                             <span className="blog__container--cards_details-group">
@@ -238,7 +238,7 @@ function BlogArticle() {
                             navigate("/blog")
                         }
                     }>
-                        <img src="/assets/blog/blog_03.png" alt="blog-03" className="blog__container--cards_image" />
+                        <img src="/assets/blog/blog_3.png" alt="blog-3" className="blog__container--cards_image" />
                         <h5 className="blog__container--cards_header"> Why should you choose good wood </h5>
                         <div className="blog__container--cards_details">
                             <span className="blog__container--cards_details-group">

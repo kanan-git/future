@@ -38,6 +38,9 @@
     }
     &__cover {
         width: auto;
+        @media only screen and (max-width: 1430px) {
+            width: 1260px;
+        }
     }
     &__container {
         width: 100%;
@@ -45,6 +48,9 @@
         justify-content: center;
         gap: 100px;
         margin-top: 50px;
+        @media only screen and (max-width: 1430px) {
+            gap: 80px;
+        }
         &--main {
             width: 853px;
             &_head {

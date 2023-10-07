@@ -22,6 +22,10 @@
         flex-wrap: wrap;
         justify-content: space-between;
         row-gap: 50px;
+        width: 95%;
+        @media only screen and (max-width: 1482px) {
+            width: 111%;
+        }
         &--teamcard {
             width: auto;
             cursor: pointer;

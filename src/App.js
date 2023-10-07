@@ -47,3 +47,15 @@ function App() {
 }
 
 export default App
+
+// - Homepage   —   /
+// - Shop   —   /shop
+// - ShopDetails   —   /shop/details
+// - Cart   —   /cart
+// - Checkout   —   /checkout
+// - Wishlist   —   /wishlist
+// - Team   —   /team
+// - Blog   —   /blog
+// - BlogArticle   —   /blog/article
+// - Contact   —   /contact
+// - About   —   /about
